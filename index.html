@@ -28,8 +28,23 @@
             display: none;
         }
         
-        #more2 {
+        .j {
+            width: 30em;
+            text-align: justify;
+        }
+        
+        .hide {
             display: none;
+        }
+        
+        .pink {
+            background-color: tan;
+            color: white;
+        }
+        
+        b,
+        span {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -56,8 +71,11 @@
                             <p>Opening Hour Mon - Fri</p>
                         </div>
                         <div class="text">
-                            <h2>+255 763 309 593</h2>
+                            <h2>+255 710 596 855
+                                <a href=" https://wa.me/+255710596855"> <img src="img/download.png" alt="" width="50" height="40"></a>
+                            </h2>
                             <p>Call Us For Free Consultation</p>
+
                         </div>
                         <div class="social">
                             <!--a href=""><i class="fab fa-twitter"></i></a>
@@ -135,11 +153,11 @@
                                                 <div class="col-md-6">
                                                     <div class="contact-form">
                                                         <div>
-                                                            @if(Session::has('message_sent'))
+
                                                             <div class="alert alert-success" role="alert">
-                                                                {{Session::get('message_sent')}} @endif
+
                                                                 <form method="POST" action="{{route('contact.send')}}">
-                                                                    @csrf
+
                                                                     <div class="form-group">
                                                                         <input type="text" class="form-control" name="name" placeholder="Your Name" required="required" />
                                                                     </div>
@@ -366,10 +384,12 @@
                                 <h3>
                                     Administrative Law</h3>
                                 <p>
-                                    Issues of violation of the constitution are intricate. Cases dealing with constitutional issues are of importance due to the <span id="dots">...</span><span id="more">impact they have
+                                    Issues of violation of the constitution are intricate. Cases dealing with constitutional issues are of importance due to the <b class="pink" onclick="evtEllipse(this)"><a class="btn" onclick="evtEllipse(this)" >Read More</a></b>
+                                    <span class="hide" onclick="spanEllipse(this)">
+impact they have
                                   on people in the society at large.
                                 </p>
-                                <a class="btn" onclick="myFunction()" id="myBtn">Read More</a>
+                               
                               <!--a  onclick="myFunction()" id="myBtn">Read more </a-->
                             </div>
                         </div>
@@ -382,9 +402,12 @@
                                     Employment Law</h3>
                                 <p>The Firm advises its clients on the legal aspects 
                                     of employment and labour law to ensure
-                                    compliance with all the <span id="dots2">...</span><span id="more2"> applicable laws.Our professionals Attorneys are ready to consult.
+                                    compliance with all the applicable
+                                      <b class="pink" onclick="evtEllipse(this)"><a class="btn" onclick="evtEllipse(this)" >Read More</a></b>
+
+<span class="hide" onclick="spanEllipse(this)">  laws.Our professionals Attorneys are ready to consult.
                                 </p>
-                                <a class="btn" onclick="myFunction2()" id="myBtn2">Read More</a>
+                                
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4">
@@ -392,14 +415,19 @@
                                 <div class="service-icon">
                                     <i class="fa fa-landmark"></i>
                                 </div>
-                                <h3>Insurance Law</h3>
+                                <h3>Insurance </br> Law</h3>
                                 <p>
-                                    We offer legal services in the insurance industry. In 
+                                We offer legal services in the insurance industry. In 
 particular, we advise on the insurance legislation 
-and litigation on policy liability or <span id="dots3">...</span><span id="more3"> repudiated claims. Our professional Attorneys are ready to listen and consult.
+and litigation on policy 
+                                      <b class="pink" onclick="evtEllipse(this)"><a class="btn" onclick="evtEllipse(this)" >Read More</a></b>
+
+<span class="hide" onclick="spanEllipse(this)">liability or impact they have
+                                  on people in the society at large.
 
                                 </p>
-                                <a class="btn" onclick="myFunction3()" id="myBtn3">Read More</a>
+                             <!-- <a class="btn" onclick="evtEllipse(this)" >Read More</a> -->
+                               
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4">
@@ -407,13 +435,16 @@ and litigation on policy liability or <span id="dots3">...</span><span id="more3
                                 <div class="service-icon">
                                     <i class="fa fa-users"></i>
                                 </div>
-                                <h3>Family Law</h3>
+                                <h3>Family  </br>
+                                    Law</h3>
                                 <p>
                                     On matters of family, family being the heart of our 
-society, our group of advocates is equipped with 
-vast knowledge on family law related  matters.Our <span id="dots4">...</span><span id="more4">professional Attorneys are ready to listen and consult.
+society, our group of advocates is  equipped with 
+vast professional Attorneys are  <b class="pink" onclick="evtEllipse(this)"><a class="btn" onclick="evtEllipse(this)" >Read More</a></b>
+
+<span class="hide" onclick="spanEllipse(this)">ready to listen and consult.
                                 </p>
-                                <a class="btn" onclick="myFunction4()" id="myBtn4">Read More</a>
+                               
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4">
@@ -425,10 +456,12 @@ vast knowledge on family law related  matters.Our <span id="dots4">...</span><sp
                                 <p>
                                     The Firm presents the interests and defends the 
 rights of our clients in various tax related 
-matters in both judicial  and quassi judicial <span id="dots5">...</span><span id="more5">
+matters in both judicial  and quassi judicial <b class="pink" onclick="evtEllipse(this)"><a class="btn" onclick="evtEllipse(this)" >Read More</a></b>
+
+<span class="hide" onclick="spanEllipse(this)">
 bodies established under the laws in Tanzania.
                                 </p>
-                                <a class="btn" onclick="myFunction5()" id="myBtn5">Read More</a>
+                               
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4">
@@ -440,10 +473,12 @@ bodies established under the laws in Tanzania.
                                     Property Law</h3>
                                 <p>
                                     Includes various areas of intellectual property blending together to protect the 
-                                    rights of authors,  performers, owners and <span id="dots6">...</span><span id="more6">
+                                    rights of authors,  performers, owners and <b class="pink" onclick="evtEllipse(this)"><a class="btn" onclick="evtEllipse(this)" >Read More</a></b>
+
+<span class="hide" onclick="spanEllipse(this)">
                                     businesses for their creative accomplishments.
                                 </p>
-                                <a class="btn" onclick="myFunction6()" id="myBtn6">Read More</a>
+                                
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4">
@@ -454,10 +489,12 @@ bodies established under the laws in Tanzania.
                                 <h3>Internet  & CyberLaw</h3>
                                 <p>
                                     Refers to how legal principles and legislation govern the use of the internet, it involves domain disputes, copyrights, 
-                                    <span id="dots7">...</span><span id="more7"> trademarks,breaching  of   licensing and privacy 
+                                    <b class="pink" onclick="evtEllipse(this)"><a class="btn" onclick="evtEllipse(this)" >Read More</a></b>
+
+<span class="hide" onclick="spanEllipse(this)"> trademarks,breaching  of   licensing and privacy 
 policies. Our professional Attorneys are ready to listen and consult.
                                 </p>
-                                <a class="btn" onclick="myFunction7()" id="myBtn7">Read More</a>
+                                
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4">
@@ -470,10 +507,12 @@ policies. Our professional Attorneys are ready to listen and consult.
                                 <p>
                                     Disposition of one’s property after death can 
 preserve assets and benefit the surviving 
-family members. At Josan Attorneys <span id="dots8">...</span><span id="more8"> we assist our clients in 
+family members. At Josan Attorneys <b class="pink" onclick="evtEllipse(this)"><a class="btn" onclick="evtEllipse(this)" >Read More</a></b>
+
+<span class="hide" onclick="spanEllipse(this)"> we assist our clients in 
 making wise decisions in their will.
                                 </p>
-                                <a class="btn" onclick="myFunction8()" id="myBtn8">Read More</a>
+                               
                             </div>
                         </div>
                     </div>
@@ -848,9 +887,11 @@ making wise decisions in their will.
                                     <div class="footer-contact">
                                         <h2>Get In Touch</h2>
                                         <p><i class="fa fa-map-marker-alt"></i>Green Acre's House, Victoria,Dar Es Salaam</p>
-                                        <p><i class="fa fa-phone-alt"></i>+255 763 309 593</p>
+                                        <p><i class="fa fa-phone-alt"></i>+255 710 596 855</p>
+
                                         <p><i class="fa fa-envelope"></i>info@josanattorneys.co.tz</p>
                                         <div class="footer-social">
+                                            <a href=" https://api.whatsapp.com/send?phone=+255710596855&text=Hello%2C%0AWelcome."> <img src="img/download.png" alt="" width="50" height="40"></a>
                                             <!--a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
                                     <a href=""><i class="fab fa-youtube"></i></a>
@@ -888,7 +929,35 @@ making wise decisions in their will.
 
 
 
+
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+            <!-- GetButton.io widget -->
+            <script type="text/javascript">
+                (function() {
+                    var options = {
+                        whatsapp: "+255710596855", // WhatsApp number
+                        call_to_action: "Message us", // Call to action
+                        button_color: "#FF6550", // Color of button
+                        position: "right", // Position may be 'right' or 'left'
+                        pre_filled_message: "I'm interested in your services", // WhatsApp pre-filled message
+                    };
+                    var proto = document.location.protocol,
+                        host = "getbutton.io",
+                        url = proto + "//static." + host;
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = url + '/widget-send-button/js/init.js';
+                    s.onload = function() {
+                        WhWidgetSendButton.init(host, proto, options);
+                    };
+                    var x = document.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                })();
+            </script>
+            <!-- /GetButton.io widget -->
+
+
 
 
 
@@ -902,146 +971,19 @@ making wise decisions in their will.
             <!-- Template Javascript -->
             <script src="js/main.js"></script>
 
+
             <script>
-                function myFunction() {
-                    var dots = document.getElementById("dots");
-                    var moreText = document.getElementById("more");
-                    var btnText = document.getElementById("myBtn");
-
-
-
-                    if (dots.style.display === "none") {
-                        dots.style.display = "inline";
-                        btnText.innerHTML = "Read more";
-                        moreText.style.display = "none";
-                    } else {
-                        dots.style.display = "none";
-                        btnText.innerHTML = "Read less";
-                        moreText.style.display = "inline";
-                    }
+                // For: http://www.webdeveloper.com/forum/showthread.php?364215-Show-only-first-line-of-a-paragraph&p=1508263#post1508263
+                function evtEllipse(info) {
+                    info.nextElementSibling.classList.toggle('hide');
+                    info.classList.toggle('hide');
                 }
 
-                function myFunction2() {
-                    var dots2 = document.getElementById("dots2");
-                    var moreText2 = document.getElementById("more2");
-                    var btnText2 = document.getElementById("myBtn2");
-
-                    if (dots2.style.display === "none") {
-                        dots2.style.display = "inline";
-                        btnText2.innerHTML = "Read more";
-                        moreText2.style.display = "none";
-                    } else {
-                        dots2.style.display = "none";
-                        btnText2.innerHTML = "Read less";
-                        moreText2.style.display = "inline";
-                    }
-                }
-
-
-                function myFunction3() {
-                    var dots3 = document.getElementById("dots3");
-                    var moreText3 = document.getElementById("more3");
-                    var btnText3 = document.getElementById("myBtn3");
-
-                    if (dots3.style.display === "none") {
-                        dots3.style.display = "inline";
-                        btnText3.innerHTML = "Read more";
-                        moreText3.style.display = "none";
-                    } else {
-                        dots3.style.display = "none";
-                        btnText3.innerHTML = "Read less";
-                        moreText3.style.display = "inline";
-                    }
-                }
-
-
-                function myFunction4() {
-                    var dots4 = document.getElementById("dots4");
-                    var moreText4 = document.getElementById("more4");
-                    var btnText4 = document.getElementById("myBtn4");
-
-                    if (dots4.style.display === "none") {
-                        dots4.style.display = "inline";
-                        btnText4.innerHTML = "Read more";
-                        moreText4.style.display = "none";
-                    } else {
-                        dots4.style.display = "none";
-                        btnText4.innerHTML = "Read less";
-                        moreText4.style.display = "inline";
-                    }
-                }
-
-
-                function myFunction5() {
-                    var dots5 = document.getElementById("dots5");
-                    var moreText5 = document.getElementById("more5");
-                    var btnText5 = document.getElementById("myBtn5");
-
-                    if (dots5.style.display === "none") {
-                        dots5.style.display = "inline";
-                        btnText5.innerHTML = "Read more";
-                        moreText5.style.display = "none";
-                    } else {
-                        dots5.style.display = "none";
-                        btnText5.innerHTML = "Read less";
-                        moreText5.style.display = "inline";
-                    }
-                }
-
-
-                function myFunction6() {
-                    var dots6 = document.getElementById("dots6");
-                    var moreText6 = document.getElementById("more6");
-                    var btnText6 = document.getElementById("myBtn6");
-
-                    if (dots6.style.display === "none") {
-                        dots6.style.display = "inline";
-                        btnText6.innerHTML = "Read more";
-                        moreText6.style.display = "none";
-                    } else {
-                        dots6.style.display = "none";
-                        btnText6.innerHTML = "Read less";
-                        moreText6.style.display = "inline";
-                    }
-                }
-
-
-                function myFunction7() {
-                    var dots7 = document.getElementById("dots7");
-                    var moreText7 = document.getElementById("more7");
-                    var btnText7 = document.getElementById("myBtn7");
-
-                    if (dots7.style.display === "none") {
-                        dots7.style.display = "inline";
-                        btnText7.innerHTML = "Read more";
-                        moreText7.style.display = "none";
-                    } else {
-                        dots7.style.display = "none";
-                        btnText7.innerHTML = "Read less";
-                        moreText7.style.display = "inline";
-                    }
-                }
-
-
-                function myFunction8() {
-                    var dots8 = document.getElementById("dots8");
-                    var moreText8 = document.getElementById("more8");
-                    var btnText8 = document.getElementById("myBtn8");
-
-                    if (dots8.style.display === "none") {
-                        dots8.style.display = "inline";
-                        btnText8.innerHTML = "Read more";
-                        moreText8.style.display = "none";
-                    } else {
-                        dots8.style.display = "none";
-                        btnText8.innerHTML = "Read less";
-                        moreText8.style.display = "inline";
-                    }
+                function spanEllipse(info) {
+                    info.classList.toggle('hide');
+                    info.previousElementSibling.classList.toggle('hide')
                 }
             </script>
-            <script defer src="https://widget.tochat.be/bundle.js?key=5022828a-a9c6-45ef-b489-8982274c60a0"></script>
-
-
 </body>
 
 </html>
