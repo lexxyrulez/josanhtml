@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if (empty($_SESSION["mail_success"])) $_SESSION["mail_success"] = false;
+if (empty($_SESSION["mail_error"])) $_SESSION["mail_error"] = false;
+
+$success = $_SESSION["mail_success"];
+$error = $_SESSION["mail_error"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -153,7 +165,7 @@
 
                             <div class="alert alert-success" role="alert">
 
-                                <form method="POST" action="{{route('contact.send')}}">
+                                <form method="POST" action="send-mail-php/email.php">
 
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="name" placeholder="Your Name" required="required" />
@@ -170,6 +182,9 @@
                                         <div class="form-group">
                                             <textarea class="form-control" name="message" placeholder="Message" required="required"></textarea>
                                         </div>
+
+                                        <?php include 'send-mail-php/contact-message.php'; ?>
+                                        
                                         <div>
                                             <button class="btn" type="submit">Send Message</button>
                                         </div>
