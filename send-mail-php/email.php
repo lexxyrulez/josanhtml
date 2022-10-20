@@ -12,7 +12,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 function redirectToIndex()
 {
-  header("Location: ../contact.html");
+  header("Location: ../contact.php");
   exit;
 }
 
