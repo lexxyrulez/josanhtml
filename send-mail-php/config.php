@@ -1,6 +1,6 @@
 <?php
 
-$myemail = "alexchambika85@gmail.com";
-$mypassword = "pefkvkdnkqeecmsr";
+$myemail = "info@josanattorneys.co.tz";
+$mypassword = "h7E39&k)";
 
 ?>
