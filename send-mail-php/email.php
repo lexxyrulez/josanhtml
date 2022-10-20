@@ -24,6 +24,7 @@ function sendMail($name, $email, $phone, $message, $subject, $date)
   $mail = new PHPMailer();
   $mail->isSMTP();
   $mail->Host = "smtp.office365.com";
+  $mail->SMTPSecure = 'tls';
   $mail->SMTPAuth = true;
   $mail->Username = $myemail;
   $mail->Password = $mypassword;
