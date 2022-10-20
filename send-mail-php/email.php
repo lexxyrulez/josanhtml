@@ -23,7 +23,7 @@ function sendMail($name, $email, $phone, $message, $subject, $date)
 
   $mail = new PHPMailer();
   $mail->isSMTP();
-  $mail->Host = "smtp.gmail.com";
+  $mail->Host = "smtp.office365.com";
   $mail->SMTPAuth = true;
   $mail->Username = $myemail;
   $mail->Password = $mypassword;
